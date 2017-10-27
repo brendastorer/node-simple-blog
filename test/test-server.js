@@ -24,7 +24,7 @@ describe('Blog Posts', function() {
       res.should.be.json;
       res.body.should.be.a('array');
 
-      res.body.length.should.be.at.least(2);
+      res.body.length.should.be.at.least(1);
       const expectedKeys = ['id', 'title', 'content', 'author', 'publishDate'];
       res.body.forEach(function(item) {
         item.should.be.a('object');
